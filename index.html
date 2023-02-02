@@ -1,29 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Ellestad/Enderle Wedding RSVP</title>
 </head>
+
+
 <body>
-    <h1>Ellestad/Enderle Wedding</h1>
-    <p>Date: August 26, 2023 2:00 pm EST</p>
-    <p>Location: St. Francis in the Fields</p>
-    <p>Address: 6710 Wolf Pen Branch Rd
-        Harrods Creek, KY 40027</p>
-    <h2>Will you be attending?</h2>
+    <section class="nav-section">
+        <nav>
+            <ul>
+                <li><a>home</a></li>
+                <li><a>rsvp</a></li>
+                <li><a>location</a></li>
+                <li><a>registry</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section class="header-section">
+        <header>
+            <span class="moon-wrapper">
+                <h1 class="header-title">KAREN</h1> <img id="moon" src="./assets/moon.png" />
+                <h1 class="header-title">JR</h1>
+            </span>
+            <h2 class="header-subtitle">26.08.2023</h2>
+            <img id="rabbit" src="./assets/IMG_0046.JPG">
+        </header>
+    </section>
+    <section>
+        <h3>registry</h3>
 
-    <form>
-        <input required placeholder="Name" type="text"/>
-        <input required placeholder="Email" type="email"/>
-        <input required placeholder="Number of Participants" type="number"/>
+    </section>
+    <section>
+        <h3>location</h3>
+        <p>Date: August 26, 2023 2:00 pm EST</p>
+        <p>Location: St. Francis in the Fields</p>
+        <p>Address: 6710 Wolf Pen Branch Rd
+            Harrods Creek, KY 40027</p>
 
-        <button>Yes!</button>
-        <button>No!</button>
-    </form>
+    </section>
+    <section>
+        <h3>ceremony</h3>
+
+    </section>
+    <section>
+        <h3>rsvp</h3>
+        <form>
+            <div class="form-group">
+                <input required placeholder="Name" type="text" />
+                <input required placeholder="Email" type="email" />
+                <input required placeholder="Number of Participants" type="number" />
+
+                <button>Yes!</button>
+                <button>No!</button>
+            </div>
+        </form>
+    </section>
+
 </body>
-<script>
-</script>
-</html>
+<style>
+    h3 {
+        font-size: 2em;
+    }
 
+    .moon-wrapper {
+        display: flex;
+        flex-direction: row;
+        margin: 0 10em;
+    }
+
+    #moon {
+        height: 100px;
+        margin: 0 1em;
+
+    }
+
+    .nav-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+
+    nav>ul>li {
+        height: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        z-index: 2;
+        padding-bottom: 3px;
+        width: fit-content;
+
+        position: relative;
+
+    }
+
+    nav>ul>li>a {
+        color: #6f8dff;
+        font-family: Mirage-regular;
+        font-size: 24px;
+
+    }
+
+    nav>ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        padding-bottom: 40px;
+
+    }
+
+    @media screen and (min-width: 900px) {
+        nav>ul {
+            flex-direction: column;
+            padding-bottom: 0px;
+
+
+        }
+
+        .nav-section {
+            justify-content: flex-start;
+        }
+
+    }
+
+
+    .header-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-title,
+    .header-subtitle {
+        margin: 0 0 0 0;
+    }
+
+    .header-title {
+        font-size: 100px;
+        margin-bottom: 10px
+    }
+
+    .header-subtitle {
+        font-size: 50px;
+        margin-bottom: 20px;
+        font-weight: 2000;
+
+    }
+
+    #rabbit {
+        max-width: 425px;
+    }
+
+
+
+    body {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+    }
+
+    * {
+        font-family: Mirage;
+        background-color: rgb(255, 255, 252);
+    }
+
+
+    @font-face {
+        font-family: Mirage;
+        src: url("./assets/MADE-Mirage-Thin.otf") format("opentype");
+    }
+
+    @font-face {
+        font-family: Mirage-regular;
+        src: url("./assets/MADE-Mirage-Regular=.otf") format("opentype");
+    }
+</style>
+<script src="index.js"></script>
+
+</html>
