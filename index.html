@@ -14,14 +14,13 @@
     <section class="nav-section">
         <nav>
             <ul>
-                <li><a>home</a></li>
-                <li><a>rsvp</a></li>
-                <li><a>location</a></li>
-                <li><a>registry</a></li>
+                <li><a href="#">home</a></li>
+                <li><a href="#form-section">rsvp</a></li>
+                <li><a href="#location-section">location</a></li>
             </ul>
         </nav>
     </section>
-    <section class="header-section">
+    <section id="header-section">
         <header>
             <span class="moon-wrapper">
                 <h1 class="header-title">KAREN</h1> <img id="moon" src="./assets/moon.png" />
@@ -31,34 +30,73 @@
             <img id="rabbit" src="./assets/IMG_0046.JPG">
         </header>
     </section>
-    <section>
-        <h3>registry</h3>
-
-    </section>
-    <section>
-        <h3>location</h3>
-        <p>Date: August 26, 2023 2:00 pm EST</p>
-        <p>Location: St. Francis in the Fields</p>
-        <p>Address: 6710 Wolf Pen Branch Rd
-            Harrods Creek, KY 40027</p>
-
-    </section>
-    <section>
-        <h3>ceremony</h3>
-
-    </section>
-    <section>
-        <h3>rsvp</h3>
-        <form>
-            <div class="form-group">
-                <input required placeholder="Name" type="text" />
-                <input required placeholder="Email" type="email" />
-                <input required placeholder="Number of Participants" type="number" />
-
-                <button>Yes!</button>
-                <button>No!</button>
+    <section id="ceremony-section">
+        <div class="ceremony-wrapper">
+            <h3>the wedding of </h3>
+            <div class="name-wrapper">
+                <h3>
+                    KAREN ELIZABETH ELLESTAD <br>
+                    and<br>
+                    JOSEPH RODOLFO ENDERLE <br>
+                </h3>
             </div>
-        </form>
+            <h3> saturday, the twenty sixth of august <br>
+                two thouasand twenty three<br>
+                two o'clock in the afternoon</h3>
+        </div>
+
+    </section>
+    <section id="picture-section">
+        <div class="picture-wrapper">
+            <div class="single-picture-one parallax">
+            </div>
+            <div class="single-picture-two parallax">
+            </div>
+
+
+        </div>
+    </section>
+    <section id="location-section">
+        <div class="location-wrapper">
+            <h3>location</h3>
+            <p>Date: August 26, 2023 2:00 pm EST</p>
+            <p>Location: St. Francis in the Fields</p>
+            <p>Address: 6710 Wolf Pen Branch Rd
+                Harrods Creek, KY 40027</p>
+        </div>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3130.218384726429!2d-85.6264622861627!3d38.32077337966375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886976752964b37d%3A0xf66aaf7211d87236!2sSt.%20Francis%20in%20the%20Fields!5e0!3m2!1sen!2sus!4v1675549733645!5m2!1sen!2sus"
+            height="250" style="width: 100%; max-width: 60em" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </section>
+
+    <section id="form-section">
+        <div class="form-wrapper">
+            <h3>kindly reply</h3>
+            <img src="./assets/moon 2.png" />
+
+            <form>
+                <div class="form-group">
+
+                    <div class="input-group">
+                        <label>name</label> <input required type="text" />
+
+                    </div>
+                    <div class="input-group">
+                        <label>email</label> <input required type="email" />
+
+                    </div>
+                    <div class="input-group"> <label>names of guests in party</label> <input required type="text" />
+                    </div>
+                    <div class="input-group">
+                        <label>food restrictions</label> <input required type="text" />
+
+                    </div>
+
+                </div>
+            </form>
+        </div>
     </section>
 
 </body>
@@ -79,6 +117,7 @@
 
     }
 
+    /* Nav Section */
     .nav-section {
         display: flex;
         flex-direction: row;
@@ -103,8 +142,9 @@
 
     nav>ul>li>a {
         color: #6f8dff;
-        font-family: Mirage-regular;
+        font-family: Mirage;
         font-size: 24px;
+        text-decoration: none;
 
     }
 
@@ -132,6 +172,12 @@
 
     }
 
+
+
+
+    /* End Nav Section */
+
+    /*  Header Section */
 
     .header-section {
         display: flex;
@@ -170,6 +216,158 @@
 
 
 
+    /* End Header Section */
+
+
+    /* Ceremony Section */
+    #ceremony-section {
+        background-image: url('./assets/watercolor\ 1\(3\).png');
+        width: 100%;
+    }
+
+    .ceremony-wrapper {
+        background-color: rgb(255, 255, 255, 0);
+        max-width: 60em;
+
+    }
+
+    .name-wrapper>h3 {
+        margin: -.5em 0;
+    }
+
+    #ceremony-section h3,
+    #ceremony-section div {
+        background-color: rgb(255, 255, 255, 0);
+        line-height: 1.2;
+        color: white;
+        text-align: center;
+    }
+
+    /*End Ceremony Section */
+    /*Picture Section */
+
+    #picture-section {
+        width: 100%;
+    }
+
+    .picture-wrapper {
+        max-width: 60em;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    .parallax {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .single-picture-one {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url('./assets/Baby.jpg');
+        width: 100%;
+        height: 500px;
+        margin: 5% 5% 0 5%;
+
+    }
+
+    .single-picture-two {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url('./assets/Baby_girl_kashmiri.jpg');
+        height: 500px;
+        width: 100%;
+        margin: 5%;
+
+    }
+
+
+    /*End Picture Section */
+    /*Location Section */
+
+    #location-section {
+        width: 100%;
+    }
+
+    .location-wrapper {
+        max-width: 60em;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .location-wrapper h3 {
+        margin: 0;
+    }
+
+
+    /*End Location  Section */
+
+    /*Form Section */
+    input {
+        outline: none;
+    }
+
+    .form-wrapper {
+        max-width: 60em;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-wrapper h3 {
+        color: #6f8dff;
+
+    }
+
+    .form-wrapper img {
+        height: 50px;
+    }
+
+    .form-group input {
+        border: none;
+
+    }
+
+    .form-group label {
+        color: #6f8dff;
+
+    }
+
+    .form-group input:focus {
+        border-bottom: 1px solid #6f8dff;
+    }
+
+    .input-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+    }
+
+    /*End Form Section */
+
+
+
+
+
     body {
         margin: 0 auto;
         display: flex;
@@ -184,15 +382,10 @@
         align-items: center;
     }
 
-    .form-group {
-        display: flex;
-        flex-direction: column;
-        max-width: 500px;
-    }
 
     * {
         font-family: Mirage;
-        background-color: rgb(255, 255, 252);
+        /* background-color: rgb(255, 255, 252); */
     }
 
 
