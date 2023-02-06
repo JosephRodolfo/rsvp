@@ -32,15 +32,15 @@
     </section>
     <section id="ceremony-section">
         <div class="ceremony-wrapper">
-            <h3>the wedding of </h3>
+            <h3 class="ceremony-text">the wedding of </h3>
             <div class="name-wrapper">
-                <h3>
+                <h3 class="ceremony-text">
                     KAREN ELIZABETH ELLESTAD <br>
                     and<br>
                     JOSEPH RODOLFO ENDERLE <br>
                 </h3>
             </div>
-            <h3> saturday, the twenty sixth of august <br>
+            <h3 class="ceremony-text"> saturday, the twenty sixth of august <br>
                 two thouasand twenty three<br>
                 two o'clock in the afternoon</h3>
         </div>
@@ -59,15 +59,13 @@
     <section id="location-section">
         <div class="location-wrapper">
             <h3>location</h3>
-            <p>Date: August 26, 2023 2:00 pm EST</p>
+            <!-- <p>Date: August 26, 2023 2:00 pm EST</p>
             <p>Location: St. Francis in the Fields</p>
             <p>Address: 6710 Wolf Pen Branch Rd
-                Harrods Creek, KY 40027</p>
+                Harrods Creek, KY 40027</p> -->
         </div>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3130.218384726429!2d-85.6264622861627!3d38.32077337966375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886976752964b37d%3A0xf66aaf7211d87236!2sSt.%20Francis%20in%20the%20Fields!5e0!3m2!1sen!2sus!4v1675549733645!5m2!1sen!2sus"
-            height="250" style="width: 100%; max-width: 60em" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d112453.38049453536!2d-85.61882659969102!3d38.30804427453895!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf66aaf7211d87236!2sSt.%20Francis%20in%20the%20Fields!5e0!3m2!1sen!2sus!4v1675614015779!5m2!1sen!2sus"  height="250" style="width: 100%; max-width: 60em" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     </section>
 
@@ -93,6 +91,9 @@
                         <label>food restrictions</label> <input required type="text" />
 
                     </div>
+                    <div class="button-wrapper">
+                    <button>Submit</button>
+                </div>
 
                 </div>
             </form>
@@ -102,7 +103,7 @@
 </body>
 <style>
     h3 {
-        font-size: 2em;
+        font-size: 3rem;
     }
 
     .moon-wrapper {
@@ -123,6 +124,7 @@
         flex-direction: row;
         justify-content: center;
         width: 100%;
+        height: 20vh;
     }
 
     nav>ul>li {
@@ -184,6 +186,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        height: 80vh;
     }
 
     header {
@@ -221,8 +224,11 @@
 
     /* Ceremony Section */
     #ceremony-section {
-        background-image: url('./assets/watercolor\ 1\(3\).png');
+        /* background-image: url('./assets/watercolor\ 1\(3\).png'); */
+        background-color: #6f8dff;
+        background-size: 80rem;
         width: 100%;
+        padding: 1em;
     }
 
     .ceremony-wrapper {
@@ -234,6 +240,11 @@
     .name-wrapper>h3 {
         margin: -.5em 0;
     }
+
+    .ceremony-text {
+        font-size: 2rem;
+    }
+    
 
     #ceremony-section h3,
     #ceremony-section div {
@@ -286,7 +297,7 @@
         background-image: url('./assets/Baby_girl_kashmiri.jpg');
         height: 500px;
         width: 100%;
-        margin: 5%;
+        margin: 5% 5% 0 5%;
 
     }
 
@@ -309,6 +320,9 @@
 
     .location-wrapper h3 {
         margin: 0;
+        color: #6f8dff;
+        margin-bottom: .5em;
+
     }
 
 
@@ -317,6 +331,7 @@
     /*Form Section */
     input {
         outline: none;
+        flex-grow: 1;
     }
 
     .form-wrapper {
@@ -327,23 +342,31 @@
         justify-content: center;
         align-items: center;
     }
-
     .form-wrapper h3 {
         color: #6f8dff;
+        margin: 0 0 .5em 0;
 
     }
 
+    .form-wrapper > * {
+        margin-bottom: 1em;
+    }
+
+
     .form-wrapper img {
-        height: 50px;
+        height: 100px;
     }
 
     .form-group input {
         border: none;
-
+        font-size: 1.5rem;
+        
     }
 
     .form-group label {
-        color: #6f8dff;
+        color: black;
+        font-size: 1.5rem;
+        margin-right: .5em;
 
     }
 
@@ -355,12 +378,39 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+        margin-bottom: 1em;
     }
     .form-group {
         display: flex;
         flex-direction: column;
-        max-width: 500px;
+        max-width: 30em;
     }
+
+    .button-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+    }
+
+    #form-section button {
+        background-color: #6f8dff;
+        color: white;
+        width: 10em;
+        height: 3em;
+        border: none;
+        font-family: Mirage-regular;
+        font-size: 1rem;
+        border-radius: 10px;
+        cursor: pointer;
+        }
+
+        #form-section button:hover {
+            box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+
+        }
 
     /*End Form Section */
 
@@ -380,11 +430,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 2em;
     }
 
 
     * {
         font-family: Mirage;
+        box-sizing: border-box;
         /* background-color: rgb(255, 255, 252); */
     }
 
