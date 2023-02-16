@@ -24,8 +24,7 @@
     <section id="header-section">
         <header>
             <span class="moon-wrapper">
-                <h1 class="header-title">KAREN</h1> <img id="moon" src="./assets/moon.png" />
-                <h1 class="header-title">JR</h1>
+                <img id="header-image" src="./assets/website header 2.png" />
             </span>
             <h2 class="header-subtitle">26.08.2023</h2>
             <img id="rabbit" src="./assets/IMG_0046.JPG">
@@ -33,19 +32,7 @@
     </section>
     <section id="ceremony-section">
         <div class="ceremony-wrapper">
-            <h3 class="ceremony-text">the wedding of </h3>
-            <div class="name-wrapper">
-                <h3 class="ceremony-text">
-                    KAREN ELIZABETH ELLESTAD <br>
-                    and<br>
-                    JOSEPH RODOLFO ENDERLE <br>
-                </h3>
-            </div>
-            <h3 class="ceremony-text"> saturday, the twenty sixth of august <br>
-                two thouasand twenty three<br>
-                two o'clock in the afternoon</h3>
-        </div>
-
+            <img src="./assets/watercolor_1(1).png" />
     </section>
     <section id="picture-section">
         <div class="picture-wrapper">
@@ -65,8 +52,10 @@
             <p>Address: 6710 Wolf Pen Branch Rd
                 Harrods Creek, KY 40027</p> -->
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d112453.38049453536!2d-85.61882659969102!3d38.30804427453895!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf66aaf7211d87236!2sSt.%20Francis%20in%20the%20Fields!5e0!3m2!1sen!2sus!4v1675614015779!5m2!1sen!2sus"  height="100%" style="width: 100%; max-width: 60em" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d112453.38049453536!2d-85.61882659969102!3d38.30804427453895!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf66aaf7211d87236!2sSt.%20Francis%20in%20the%20Fields!5e0!3m2!1sen!2sus!4v1675614015779!5m2!1sen!2sus"
+            height="100%" style="width: 100%; max-width: 60em" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     </section>
 
@@ -93,8 +82,8 @@
 
                     </div>
                     <div class="button-wrapper">
-                    <button>Submit</button>
-                </div>
+                        <button>Submit</button>
+                    </div>
 
                 </div>
             </form>
@@ -110,13 +99,24 @@
     .moon-wrapper {
         display: flex;
         flex-direction: row;
-        margin: 0 10em;
+        margin: 0 auto;
     }
 
-    #moon {
-        height: 100px;
-        margin: 0 1em;
+    #header-image {
+        max-height: 140px;
+        margin: 0 2em 1em 2em;
+        width: 100%;
+        max-width: 800px;
 
+
+    }
+
+    @media screen and (max-width: 600px) {
+        #header-image {
+
+            margin: 0;
+            padding: 2em;
+        }
     }
 
     /* Nav Section */
@@ -134,7 +134,7 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        margin: 0;
+        margin-right: 1em;
         z-index: 2;
         padding-bottom: 3px;
         width: fit-content;
@@ -150,6 +150,32 @@
         text-decoration: none;
 
     }
+
+    @media screen and (max-width: 600px) {
+
+        nav>ul {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        nav>ul>li {
+            height: 15px;
+
+
+        }
+
+        nav>ul>li>a {
+            color: #6f8dff;
+            font-family: Mirage;
+            font-size: 1rem;
+            text-decoration: none;
+
+        }
+
+
+    }
+
 
     nav>ul {
         list-style: none;
@@ -187,7 +213,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        height: 80vh;
+        min-height: 80vh;
     }
 
     header {
@@ -208,15 +234,36 @@
     }
 
     .header-subtitle {
-        font-size: 50px;
         margin-bottom: 20px;
         font-weight: 2000;
+        font-size: 2.75rem;
+
+    }
+
+    @media screen and (min-width: 600px) {
+        .header-subtitle {
+
+            font-size: 4rem;
+        }
+
+
+
+    }
+
+    @media screen and (min-width: 900px) {
+        .header-subtitle {
+
+            font-size: 4.5rem;
+        }
 
     }
 
     #rabbit {
         max-width: 425px;
+        width: 100%;
+        margin-bottom: 2em;
     }
+
 
 
 
@@ -225,21 +272,28 @@
 
     /* Ceremony Section */
     #ceremony-section {
-        /* background-image: url('./assets/watercolor\ 1\(3\).png'); */
-        background-color: #6f8dff;
+        background-image: url('./assets/watercolor\ 1\(3\).png');
+        /* background-color: #6f8dff; */
         background-size: 80rem;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         width: 100%;
-        padding: 1em;
-        height: 100vh;
+        padding: 2em;
+        min-height: 80vh;
     }
 
     .ceremony-wrapper {
         background-color: rgb(255, 255, 255, 0);
         max-width: 60em;
+
+    }
+
+    .ceremony-wrapper img {
+        max-height: 500px;
+        max-width: 650px;
+        width: 100%;
 
     }
 
@@ -250,7 +304,7 @@
     .ceremony-text {
         font-size: 2rem;
     }
-    
+
 
     #ceremony-section h3,
     #ceremony-section div {
@@ -277,6 +331,7 @@
 
 
     }
+
 
     .parallax {
         background-attachment: fixed;
@@ -306,6 +361,27 @@
         margin: 0 0 0 0;
 
     }
+
+    @media screen and (max-width: 700px) {
+        .picture-wrapper {
+            padding: 5%;
+
+            flex-direction: column;
+        }
+
+        .single-picture-one,
+        .single-picture-two {
+            width: 100%;
+            margin: 5%;
+            height: 250px;
+        }
+
+        .picture-wrapper {
+            padding: 2%;
+
+        }
+    }
+
 
 
     /*End Picture Section */
@@ -339,6 +415,7 @@
     .form-section {
         height: 100vh
     }
+
     input {
         outline: none;
         flex-grow: 1;
@@ -352,13 +429,14 @@
         justify-content: center;
         align-items: center;
     }
+
     .form-wrapper h3 {
         color: #6f8dff;
         margin: 0 0 .5em 0;
 
     }
 
-    .form-wrapper > * {
+    .form-wrapper>* {
         margin-bottom: 1em;
     }
 
@@ -370,13 +448,12 @@
     .form-group input {
         border: none;
         font-size: 1.5rem;
-        
+
     }
 
     .form-group label {
         color: black;
         font-size: 1.5rem;
-        margin-right: .5em;
 
     }
 
@@ -389,11 +466,30 @@
         flex-direction: row;
         justify-content: flex-start;
         margin-bottom: 1em;
+        margin-right: 1.5em;
     }
+
+    .input-group input {
+        width: 100%;
+    }
+
     .form-group {
         display: flex;
         flex-direction: column;
         max-width: 30em;
+        width: 100%;
+    }
+
+    .input-group label {
+        margin-right: .5em;
+    }
+
+    @media screen and (max-width: 500px) {
+        .form-group {
+            padding: 0 1em;
+
+        }
+
     }
 
     .button-wrapper {
@@ -414,13 +510,13 @@
         font-size: 1rem;
         border-radius: 10px;
         cursor: pointer;
-        }
+    }
 
-        #form-section button:hover {
-            box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
-            cursor: pointer;
+    #form-section button:hover {
+        box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+        cursor: pointer;
 
-        }
+    }
 
     /*End Form Section */
 
