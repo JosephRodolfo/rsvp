@@ -11,7 +11,7 @@
 
 
 <body>
-    <section class="nav-section">
+    <!-- <section class="nav-section">
         <nav>
             <ul>
                 <li><a href="#">home</a></li>
@@ -20,21 +20,20 @@
                 <li><a href="#location-section">location</a></li>
             </ul>
         </nav>
-    </section>
+    </section> -->
     <section id="header-section">
         <header>
             <span class="moon-wrapper">
-                <img id="header-image" src="./assets/website header 2.png" />
+                <img id="header-image" src="./assets/header(1).png" />
             </span>
-            <h2 class="header-subtitle">26.08.2023</h2>
+            <!-- <h2 class="header-subtitle">26.08.2023</h2> -->
             <img id="rabbit" src="./assets/IMG_0046.JPG">
         </header>
     </section>
-    <section id="ceremony-section">
-        <div class="ceremony-wrapper">
+    <!-- <section id="ceremony-section">
             <img src="./assets/watercolor_1(1).png" />
-    </section>
-    <section id="picture-section">
+    </section> -->
+    <!-- <section id="picture-section">
         <div class="picture-wrapper">
             <div class="single-picture-one parallax">
             </div>
@@ -43,39 +42,41 @@
 
 
         </div>
-    </section>
+    </section> -->
     <section id="location-section">
         <div class="location-wrapper">
-            <h3>location</h3>
+            <!-- <h3>location</h3> -->
             <!-- <p>Date: August 26, 2023 2:00 pm EST</p>
             <p>Location: St. Francis in the Fields</p>
             <p>Address: 6710 Wolf Pen Branch Rd
                 Harrods Creek, KY 40027</p> -->
+                <div id="map-container">
+
+                    <img id="map" src="./assets/map.jpg"/>
+                </div>
         </div>
-        <iframe
+
+        <!-- <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d112453.38049453536!2d-85.61882659969102!3d38.30804427453895!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf66aaf7211d87236!2sSt.%20Francis%20in%20the%20Fields!5e0!3m2!1sen!2sus!4v1675614015779!5m2!1sen!2sus"
             height="100%" style="width: 100%; max-width: 60em" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+            referrerpolicy="no-referrer-when-downgrade"></iframe> -->
 
     </section>
 
-    <section id="form-section">
-        <div class="form-wrapper">
-            <h3>kindly reply</h3>
-            <img src="./assets/moon 2.png" />
-
+    <section class="form-section">
+     <div class="form-wrapper">
             <form>
                 <div class="form-group">
 
                     <div class="input-group">
-                        <label>name</label> <input required type="text" />
+                        <label>name/s</label> <input required type="text" />
 
                     </div>
                     <div class="input-group">
-                        <label>email</label> <input required type="email" />
+                        <label>no. in party</label> <input required type="number" />
 
                     </div>
-                    <div class="input-group"> <label>names of guests in party</label> <input required type="text" />
+                    <div class="input-group"> <label>email</label> <input required type="email" />
                     </div>
                     <div class="input-group">
                         <label>food restrictions</label> <input required type="text" />
@@ -87,11 +88,18 @@
 
                 </div>
             </form>
-        </div>
+        </div> 
     </section>
-
+    <section class="form-section">
+        <img id="footer-photo" src="./assets/kenderle 2.png"/>
+    </section>
 </body>
 <style>
+
+    #footer-photo {
+        width: 60em;
+        margin-bottom: 0;
+    }
     h3 {
         font-size: 3rem;
     }
@@ -99,14 +107,16 @@
     .moon-wrapper {
         display: flex;
         flex-direction: row;
-        margin: 0 auto;
+        justify-content: center;
+        margin-bottom: 4em;
+        width: 100%;
     }
 
     #header-image {
         max-height: 140px;
         margin: 0 2em 1em 2em;
         width: 100%;
-        max-width: 800px;
+        max-width: 700px;
 
 
     }
@@ -208,12 +218,13 @@
 
     /*  Header Section */
 
-    .header-section {
+    #header-section {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         min-height: 80vh;
+        height: 100vh;
     }
 
     header {
@@ -259,9 +270,8 @@
     }
 
     #rabbit {
-        max-width: 425px;
+        max-width: 375px;
         width: 100%;
-        margin-bottom: 2em;
     }
 
 
@@ -272,7 +282,7 @@
 
     /* Ceremony Section */
     #ceremony-section {
-        background-image: url('./assets/watercolor\ 1\(3\).png');
+        /* background-image: url('./assets/watercolor\ 1\(3\).png'); */
         /* background-color: #6f8dff; */
         background-size: 80rem;
         display: flex;
@@ -408,21 +418,44 @@
 
     }
 
+    #map-container {
+        max-width: 60em;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #map {
+        max-width: 900px;
+    }
+
 
     /*End Location  Section */
 
     /*Form Section */
     .form-section {
-        height: 100vh
+       min-height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 80em;
     }
 
     input {
         outline: none;
         flex-grow: 1;
     }
+    form {
+        width: 40em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
     .form-wrapper {
-        max-width: 60em;
+        width: 80em;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -446,14 +479,18 @@
     }
 
     .form-group input {
-        border: none;
-        font-size: 1.5rem;
+        border-bottom: 1px solid #6f8dff;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        font-size: 3rem;
 
     }
 
     .form-group label {
         color: black;
-        font-size: 1.5rem;
+        font-size: 3rem;
+        white-space: nowrap;
 
     }
 
@@ -476,12 +513,13 @@
     .form-group {
         display: flex;
         flex-direction: column;
-        max-width: 30em;
+        max-width: 60em;
         width: 100%;
     }
 
     .input-group label {
         margin-right: .5em;
+        font-size: 3rem;
     }
 
     @media screen and (max-width: 500px) {
@@ -500,7 +538,7 @@
         margin-top: 1em;
     }
 
-    #form-section button {
+    .form-section button {
         background-color: #6f8dff;
         color: white;
         width: 10em;
@@ -512,7 +550,7 @@
         cursor: pointer;
     }
 
-    #form-section button:hover {
+    .form-section button:hover {
         box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
         cursor: pointer;
 
@@ -536,12 +574,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 2em;
+        /* margin-bottom: 2em; */
     }
 
 
     * {
-        font-family: Mirage;
+        font-family: Apoc;
         box-sizing: border-box;
         /* background-color: rgb(255, 255, 252); */
     }
@@ -555,6 +593,10 @@
     @font-face {
         font-family: Mirage-regular;
         src: url("./assets/MADE-Mirage-Regular=.otf") format("opentype");
+    }
+    @font-face {
+        font-family: Apoc;
+        src: url("./assets/ApothecarySerif.otf") format("opentype");
     }
 </style>
 <script src="index.js"></script>
